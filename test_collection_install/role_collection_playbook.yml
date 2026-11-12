@@ -1,0 +1,9 @@
+---
+- name: Run my_own_role from collection
+  hosts: localhost
+  connection: local
+  roles:
+    - role: my_own_namespace.yandex_cloud_elk.my_own_role
+      vars:
+        path: /tmp/collection_role_test.txt
+        content: "Привет от роли из коллекции!"
